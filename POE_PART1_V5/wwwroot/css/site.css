@@ -1,0 +1,262 @@
+html {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+body {
+    background-color: #212529;
+/*    background-color: #121212;*/
+    color: lightgreen !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6,
+label, a {
+    color: lightgreen !important;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000 !important;
+    padding: 0.8rem 1rem;
+    border-bottom: 2px solid #198754;
+}
+
+.navbar-brand, .nav-link {
+    color: #198754 !important;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+    .navbar-brand:hover, .nav-link:hover {
+        color: #22a063 !important;
+    }
+
+.navbar-toggler {
+    border-color: #198754;
+}
+
+.navbar-toggler-icon {
+    filter: invert(70%) sepia(100%) saturate(300%) hue-rotate(120deg);
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    position: static !important;
+    padding: 20px 0;
+    
+}
+
+    .footer a {
+        color: #198754;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .footer a:hover {
+            color: #22a063;
+            text-decoration: underline;
+        }
+
+/* Images */
+img {
+    width: 200px !important;
+    height: 120px !important;
+}
+
+/* Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #000 !important;
+    color: bisque !important;
+    border: 1px solid #198754;
+}
+
+    .table th {
+        background-color: #000 !important;
+        color: lightgreen !important;
+        padding: 10px;
+        border: 1px solid #198754;
+        text-align: left;
+    }
+
+    .table td {
+        background-color: #121212 !important;
+        color: white !important;
+        padding: 10px;
+        border: 1px solid #198754;
+    }
+
+    .table tr:hover {
+        background-color: #1a1a1a !important;
+    }
+
+td a {
+    color: lightgreen !important;
+    text-decoration: none;
+}
+
+    td a:hover {
+        color: #22a063 !important;
+        text-decoration: underline;
+    }
+
+/* Buttons */
+.btn-primary {
+    margin-top: 10px;
+    background-color: #68cd66 !important;
+    border-color: lightgreen;
+    color: black !important;
+}
+
+    .btn-primary:hover {
+        background-color: #4a9349 !important;
+        border-color: lightgreen;
+    }
+
+.btn-outline-success {
+    border-color: #198754;
+    color: #198754;
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-outline-success:hover {
+        background-color: #198754;
+        color: #fff;
+    }
+
+a.btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Search Input + Button Group */
+.input-group {
+    gap: 0;
+}
+
+.search-input,
+.search-btn {
+    height: 50px;
+    border-radius: 0 !important;
+}
+
+.search-input {
+    background-color: #212529 !important;
+    border: 1px solid #198754 !important;
+    color: lightgreen !important;
+    padding: 10px;
+}
+
+    .search-input::placeholder {
+        color: lightgreen !important;
+    }
+
+.search-btn {
+    background-color: #68cd66 !important;
+    color: black !important;
+    border: 1px solid lightgreen;
+    transition: background-color 0.3s ease-in-out;
+    padding: 0 20px;
+    margin: 0px;
+}
+
+
+
+    .search-btn:hover {
+        background-color: #4a9349 !important;
+    }
+
+    .search-container{
+        margin-top: 0px;
+    }
+
+/* Header (Hero) Section */
+header {
+/*    background-color: #121212 !important;*/
+}
+
+    header h1 {
+        color: #198754 !important;
+    }
+
+    header p {
+        color: lightgreen !important;
+    }
+
+/* Form Floating Cleanup (if used) */
+.form-floating {
+    margin-bottom: 1.5rem;
+}
+
+    .form-floating input {
+        background-color: #212529 !important;
+        color: lightgreen !important;
+        border: 1px solid #198754;
+    }
+
+        .form-floating input::placeholder {
+            color: lightgreen !important;
+        }
+
+    .form-floating label {
+        color: lightgreen !important;
+    }
+
+/* Focus Styling */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #198754;
+}
+
+/* Responsive Typography */
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.quick-card {
+    background-color: #1e1e1e;
+    border: 1px solid #198754;
+    color: lightgreen;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+}
+
+    .quick-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 20px rgba(25, 135, 84, 0.3);
+    }
+
+    .quick-card .card-title {
+        color: #68cd66;
+        font-weight: bold;
+    }
+
+    .quick-card .card-text {
+        font-size: 0.95rem;
+        color: lightgreen;
+    }
+
+.card-body .btn {
+    margin-top: 10px;
+}
+
+
+
+
+

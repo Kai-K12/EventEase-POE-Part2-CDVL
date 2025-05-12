@@ -1,0 +1,42 @@
+﻿@model POE_PART1_V5.Models.Venue
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Venue</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VenueName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VenueName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VenueLocation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VenueLocation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VenueCapacity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VenueCapacity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VenueImageUrl)
+        </dt>
+        <dd class = "col-sm-10">
+            https://dummyimage.com/200x120/000/fff.jpg
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.VenueID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

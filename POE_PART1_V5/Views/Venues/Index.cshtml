@@ -1,0 +1,55 @@
+﻿@model IEnumerable<POE_PART1_V5.Models.Venue>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Venue Name
+            </th>
+            <th>
+                Venue Location
+            </th>
+            <th>
+                Venue Capacity
+            </th>
+            <th>
+                Venue Image
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VenueName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VenueLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VenueCapacity)
+                </td>
+                <td>
+                    <img src="@(string.IsNullOrEmpty(item.VenueImageUrl)? "/images/placeHolder.jpg" : item.VenueImageUrl)"
+                         alt="Venue Image" style="max-width: 150px; max-height: 100px; border:2px solid lightgreen" />
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.VenueID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.VenueID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.VenueID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

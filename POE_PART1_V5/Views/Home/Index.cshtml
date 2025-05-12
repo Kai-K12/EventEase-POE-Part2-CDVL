@@ -1,0 +1,45 @@
+﻿<header class="text-center text-white d-flex flex-column justify-content-center align-items-center  bg-dark">
+    <div class="container">
+        <h1 class="display-3 fw-bold text-success mb-3">Welcome to My EventEase Website</h1>
+        <p class="lead text-light mb-5">Easily manage your bookings, events, and venues.</p>
+
+        <div class="row justify-content-center g-4">
+            <div class="col-md-3">
+                <div class="card quick-card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Bookings</h5>
+                        <p class="card-text">View and manage your bookings.</p>
+                        <a href="@Url.Action("Index", "Bookings")" class="btn btn-outline-success">Open</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card quick-card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Events</h5>
+                        <p class="card-text">Explore upcoming events.</p>
+                        <a href="@Url.Action("Index", "Events")" class="btn btn-outline-success">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card quick-card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Venues</h5>
+                        <p class="card-text">Browse venue listings.</p>
+                        <a href="@Url.Action("Index", "Venues")" class="btn btn-outline-success">Browse</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card quick-card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Filter</h5>
+                        <p class="card-text">Refine bookings quickly.</p>
+                        <a href="@Url.Action("Filter", "Bookings")" class="btn btn-outline-success">Filter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

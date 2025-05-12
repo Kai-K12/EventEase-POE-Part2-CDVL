@@ -1,0 +1,55 @@
+﻿@model IEnumerable<POE_PART1_V5.Models.Booking>
+@{
+    ViewData["Title"] = "Filter Bookings";
+}
+
+<header class="text-center py-4">
+    <h1>Filter Bookings</h1>
+    <p>Search by Booking ID or Event Name</p>
+</header>
+
+<form asp-action="Filter" method="get" class="mb-5">
+    <div class="search-container row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="input-group align-items-stretch">
+                <input type="text" name="searchTerm" class="form-control search-input" placeholder="Search by Booking ID or Event Name" />
+                <button type="submit" class="btn btn-primary search-btn">🔍 Search</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+@if (Model != null && Model.Any())
+{
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Event Name</th>
+                    <th>Venue</th>
+                    <th>Booking Date</th>
+                    <th>Booking End Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var booking in Model)
+                {
+                    <tr>
+                        <td>@booking.BookingID</td>
+                        <td>@booking.Event?.EventName</td>
+                        <td>@booking.Venue?.VenueName</td>
+                        <td>@(booking.BookingDate?.ToShortDateString() ?? "doesn't exist")</td>
+                        <td>@booking.BookingEndDate?.ToShortDateString()</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <p class="text-warning text-center">No bookings found.</p>
+}
