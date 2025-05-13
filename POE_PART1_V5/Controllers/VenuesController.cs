@@ -180,6 +180,11 @@ namespace POE_PART1_V5.Controllers
                 return View(venue); // return to Delete.cshtml with error
             }
 
+            if (!string.IsNullOrEmpty(venue.VenueImageUrl))
+            {
+                await _blobService.DeleteImageAsync(venue.VenueImageUrl);
+            }
+
             _context.Venue.Remove(venue);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
